@@ -1,14 +1,14 @@
-using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 namespace AudioSystem
 {
-    [Serializable]
-    public class SoundData
+    [CreateAssetMenu(fileName = "SoundClip", menuName = "Audio Settings/Sound Clip", order = 1)]
+    public class SoundData : ScriptableObject
     {
-        public AudioClip clip;
+        public AudioClip[] clips;
         public AudioMixerGroup mixerGroup;
+        public bool randomClip = true;
         public bool loop;
         public bool playOnAwake;
         public bool frequentSound;
@@ -34,5 +34,11 @@ namespace AudioSystem
         public bool ignoreListenerPause;
 
         public AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic;
+
+        public AudioClip GetClip(int index = 0)
+        {
+            if (clips.Length < 1) return clips[0];
+            return randomClip ? clips[Random.Range(0, clips.Length - 1)] : clips[index];
+        }
     }
 }

@@ -22,7 +22,6 @@ namespace AudioSystem
         public void Initialize(SoundData data)
         {
             Data = data;
-            audioSource.clip = data.clip;
             audioSource.outputAudioMixerGroup = data.mixerGroup;
             audioSource.loop = data.loop;
             audioSource.playOnAwake = data.playOnAwake;
@@ -52,10 +51,9 @@ namespace AudioSystem
 
         public void Play()
         {
-            if (playingCoroutine != null)
-            {
-                StopCoroutine(playingCoroutine);
-            }
+            if (playingCoroutine != null) StopCoroutine(playingCoroutine);
+
+            audioSource.clip = Data.GetClip();
 
             audioSource.Play();
             playingCoroutine = StartCoroutine(WaitForSoundToEnd());
@@ -79,7 +77,12 @@ namespace AudioSystem
             SoundManager.Instance.ReturnToPool(this);
         }
 
-        public void WithRandomPitch(float min = -0.05f, float max = 0.05f)
+        public void SetAudioClip(AudioClip clip)
+        {
+            audioSource.clip = clip;
+        }
+
+        public void WithRandomPitch(float min = -0.1f, float max = 0.1f)
         {
             audioSource.pitch += Random.Range(min, max);
         }

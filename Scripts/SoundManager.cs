@@ -78,7 +78,7 @@ namespace AudioSystem
 
         SoundEmitter CreateSoundEmitter()
         {
-            var soundEmitter = Instantiate(soundEmitterPrefab);
+            var soundEmitter = Instantiate(soundEmitterPrefab, this.transform);
             soundEmitter.gameObject.SetActive(false);
             return soundEmitter;
         }
