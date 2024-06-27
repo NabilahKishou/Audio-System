@@ -8,7 +8,6 @@ namespace AudioSystem
     {
         public AudioClip[] clips;
         public AudioMixerGroup mixerGroup;
-        public bool randomClip = true;
         public bool loop;
         public bool playOnAwake;
         public bool frequentSound;
@@ -21,6 +20,8 @@ namespace AudioSystem
         public int priority = 128;
         public float volume = 1f;
         public float pitch = 1f;
+        public float minPitch = .5f;
+        public float maxPitch = 1f;
         public float panStereo;
         public float spatialBlend;
         public float reverbZoneMix = 1f;
@@ -35,10 +36,15 @@ namespace AudioSystem
 
         public AudioRolloffMode rolloffMode = AudioRolloffMode.Logarithmic;
 
-        public AudioClip GetClip(int index = 0)
+        public AudioClip GetClip(bool isRandom = false)
         {
-            if (clips.Length < 1) return clips[0];
-            return randomClip ? clips[Random.Range(0, clips.Length - 1)] : clips[index];
+            if (clips.Length <= 1) return clips[0];
+            return isRandom ? clips[Random.Range(0, clips.Length - 1)] : clips[0];
+        }
+
+        public float GetPitch(bool isRandom = false)
+        {
+            return isRandom ? Random.Range(minPitch, maxPitch) : pitch;
         }
     }
 }

@@ -53,8 +53,6 @@ namespace AudioSystem
         {
             if (playingCoroutine != null) StopCoroutine(playingCoroutine);
 
-            audioSource.clip = Data.GetClip();
-
             audioSource.Play();
             playingCoroutine = StartCoroutine(WaitForSoundToEnd());
         }
@@ -77,7 +75,12 @@ namespace AudioSystem
             SoundManager.Instance.ReturnToPool(this);
         }
 
-        public void SetAudioClip(AudioClip clip)
+        public void RandomPitch(float random)
+        {
+            audioSource.pitch = random;
+        }
+
+        public void RandomClip(AudioClip clip)
         {
             audioSource.clip = clip;
         }

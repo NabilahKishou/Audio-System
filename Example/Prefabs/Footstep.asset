@@ -32,6 +32,8 @@ MonoBehaviour:
   priority: 128
   volume: 1
   pitch: 1
+  minPitch: 0.5
+  maxPitch: 1
   panStereo: 0
   spatialBlend: 0
   reverbZoneMix: 1
