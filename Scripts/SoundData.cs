@@ -8,6 +8,8 @@ namespace AudioSystem
     {
         public AudioClip[] clips;
         public AudioMixerGroup mixerGroup;
+        public VolumeReference volume;
+        public PitchReference pitch;
         public bool loop;
         public bool playOnAwake;
         public bool frequentSound;
@@ -18,10 +20,6 @@ namespace AudioSystem
         public bool bypassReverbZones;
 
         public int priority = 128;
-        public float volume = 1f;
-        public float pitch = 1f;
-        public float minPitch = .5f;
-        public float maxPitch = 1f;
         public float panStereo;
         public float spatialBlend;
         public float reverbZoneMix = 1f;
@@ -40,11 +38,6 @@ namespace AudioSystem
         {
             if (clips.Length <= 1) return clips[0];
             return isRandom ? clips[Random.Range(0, clips.Length - 1)] : clips[0];
-        }
-
-        public float GetPitch(bool isRandom = false)
-        {
-            return isRandom ? Random.Range(minPitch, maxPitch) : pitch;
         }
     }
 }

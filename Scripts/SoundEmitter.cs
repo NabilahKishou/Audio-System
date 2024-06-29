@@ -32,8 +32,8 @@ namespace AudioSystem
             audioSource.bypassReverbZones = data.bypassReverbZones;
 
             audioSource.priority = data.priority;
-            audioSource.volume = data.volume;
-            audioSource.pitch = data.pitch;
+            audioSource.volume = data.volume.Value;
+            audioSource.pitch = data.pitch.Value;
             audioSource.panStereo = data.panStereo;
             audioSource.spatialBlend = data.spatialBlend;
             audioSource.reverbZoneMix = data.reverbZoneMix;

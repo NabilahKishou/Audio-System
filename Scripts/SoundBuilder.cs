@@ -7,7 +7,6 @@ namespace AudioSystem
         readonly SoundManager soundManager;
         Vector3 position = Vector3.zero;
         bool randomClip;
-        bool randomPitch;
 
         public SoundBuilder(SoundManager soundManager)
         {
@@ -23,11 +22,6 @@ namespace AudioSystem
         public SoundBuilder WithRandomClip()
         {
             this.randomClip = true;
-            return this;
-        }
-        public SoundBuilder WithRandomPitch()
-        {
-            this.randomPitch = true;
             return this;
         }
 
@@ -46,7 +40,6 @@ namespace AudioSystem
             soundEmitter.transform.position = position;
             soundEmitter.transform.parent = soundManager.transform;
             soundEmitter.RandomClip(soundData.GetClip(randomClip));
-            soundEmitter.RandomPitch(soundData.GetPitch(randomPitch));
 
             if (soundData.frequentSound)
             {

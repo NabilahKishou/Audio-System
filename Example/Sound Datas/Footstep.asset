@@ -21,7 +21,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 84ec37aad3756e144ba2e754560ffc48, type: 3}
   - {fileID: 8300000, guid: 5de22cb729215114183398894b868982, type: 3}
   mixerGroup: {fileID: 0}
-  randomClip: 1
+  volume:
+    _useConstant: 1
+    _constantValue: 1
+    _preset: {fileID: 0}
+  pitch:
+    _useConstant: 1
+    _constantValue: 1
+    _minLimit: -3
+    _maxLimit: 3
+    _minValue: -0.5
+    _maxValue: 0.5
   loop: 0
   playOnAwake: 0
   frequentSound: 0
@@ -30,10 +40,6 @@ MonoBehaviour:
   bypassListenerEffects: 0
   bypassReverbZones: 0
   priority: 128
-  volume: 1
-  pitch: 1
-  minPitch: 0.5
-  maxPitch: 1
   panStereo: 0
   spatialBlend: 0
   reverbZoneMix: 1

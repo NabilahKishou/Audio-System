@@ -17,7 +17,7 @@ namespace AudioSystem.Example
         private void SpaceKeyDown()
         {
             if (_soundB == null) _soundB = SoundManager.Instance.CreateSoundBuilder();
-            _soundB.WithRandomClip().WithRandomPitch().Play(_clipData);
+            _soundB.WithRandomClip().Play(_clipData);
         }
     }
 
