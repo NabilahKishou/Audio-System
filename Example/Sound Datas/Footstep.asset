@@ -22,16 +22,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5de22cb729215114183398894b868982, type: 3}
   mixerGroup: {fileID: 0}
   volume:
-    _useConstant: 1
-    _constantValue: 1
-    _preset: {fileID: 0}
+    _useConstant: 0
+    _constantValue: 0.745
+    _preset: {fileID: 11400000, guid: 5fb15b874ba69104e8f14d08c08ca0cf, type: 2}
   pitch:
-    _useConstant: 1
-    _constantValue: 1
+    _useConstant: 0
+    _constantValue: 0.85
     _minLimit: -3
     _maxLimit: 3
-    _minValue: -0.5
-    _maxValue: 0.5
+    _minValue: 0.81518286
+    _maxValue: 1.7220888
   loop: 0
   playOnAwake: 0
   frequentSound: 0

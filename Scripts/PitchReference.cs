@@ -8,8 +8,8 @@ namespace AudioSystem
     {
         [SerializeField] bool _useConstant = true;
         [SerializeField] float _constantValue = 1f;
-        [SerializeField] float _minLimit = -3f, _maxLimit = 3f;
-        [SerializeField] float _minValue = -.5f, _maxValue = .5f;
+        [SerializeField] float _minLimit = 0f, _maxLimit = 3f;
+        [SerializeField] float _minValue = .5f, _maxValue = 1.5f;
 
         public PitchReference() { }
         public PitchReference(float value)

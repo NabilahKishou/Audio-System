@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 
 namespace AudioSystem
 {
-    [CreateAssetMenu(fileName = "SoundClip", menuName = "Audio Settings/Sound Clip", order = 1)]
+    [CreateAssetMenu(fileName = "SoundData", menuName = "Audio Settings/Sound Data", order = 1)]
     public class SoundData : ScriptableObject
     {
         public AudioClip[] clips;

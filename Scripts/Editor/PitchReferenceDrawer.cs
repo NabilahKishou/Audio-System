@@ -41,7 +41,7 @@ namespace AudioSystem
             // Draw fields - pass GUIContent.none to each so they are drawn without labels
             EditorGUI.PropertyField(boolRect, constantBool, GUIContent.none);
             if (constantBool.boolValue)
-                EditorGUI.Slider(constRect, constValueFloat.floatValue, minLimFloat.floatValue, maxLimFloat.floatValue);
+                constValueFloat.floatValue = EditorGUI.Slider(constRect, constValueFloat.floatValue, minLimFloat.floatValue, maxLimFloat.floatValue);
             else
             {
                 EditorGUI.FloatField(minRect, minVal);
