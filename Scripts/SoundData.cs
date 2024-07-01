@@ -8,7 +8,9 @@ namespace AudioSystem
     {
         public AudioClip[] clips;
         public AudioMixerGroup mixerGroup;
+        [Tooltip("Uncheck to use volume preset")]
         public VolumeReference volume;
+        [Tooltip("Uncheck to use random range pitch")]
         public PitchReference pitch;
         public bool loop;
         public bool playOnAwake;

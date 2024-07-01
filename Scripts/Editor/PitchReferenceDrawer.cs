@@ -44,8 +44,8 @@ namespace AudioSystem
                 constValueFloat.floatValue = EditorGUI.Slider(constRect, constValueFloat.floatValue, minLimFloat.floatValue, maxLimFloat.floatValue);
             else
             {
-                EditorGUI.FloatField(minRect, minVal);
-                EditorGUI.FloatField(maxRect, maxVal);
+                minVal = EditorGUI.FloatField(minRect, minValFloat.floatValue);
+                maxVal = EditorGUI.FloatField(maxRect, maxValFloat.floatValue);
                 EditorGUI.MinMaxSlider(sliderect, ref minVal, ref maxVal, minLimFloat.floatValue, maxLimFloat.floatValue);
             }
 
@@ -55,8 +55,8 @@ namespace AudioSystem
             // And finally update the variables
             if (EditorGUI.EndChangeCheck())
             {
-                minValFloat.floatValue = minVal;
-                maxValFloat.floatValue = maxVal;
+                minValFloat.floatValue = (float)System.Math.Round(minVal, 3);
+                maxValFloat.floatValue = (float)System.Math.Round(maxVal, 3);
             }
             EditorGUI.EndProperty();
         }

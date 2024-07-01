@@ -23,15 +23,15 @@ MonoBehaviour:
   mixerGroup: {fileID: 0}
   volume:
     _useConstant: 0
-    _constantValue: 0.745
+    _constantValue: 1
     _preset: {fileID: 11400000, guid: 5fb15b874ba69104e8f14d08c08ca0cf, type: 2}
   pitch:
     _useConstant: 0
-    _constantValue: 0.85
-    _minLimit: -3
+    _constantValue: 1
+    _minLimit: 0
     _maxLimit: 3
-    _minValue: 0.81518286
-    _maxValue: 1.7220888
+    _minValue: 0.75
+    _maxValue: 1.5
   loop: 0
   playOnAwake: 0
   frequentSound: 0
