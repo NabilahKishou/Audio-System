@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace AudioSystem.Example
@@ -12,13 +13,20 @@ namespace AudioSystem.Example
         {
             if (Input.GetKeyDown(KeyCode.Space))
                 SpaceKeyDown();
+            if (Input.GetKeyDown(KeyCode.Backspace))
+                BackspaceDown();
+        }
+
+        private void BackspaceDown()
+        {
+            _soundB ??= SoundManager.Instance.CreateSoundBuilder();
+            _soundB.WithRandomClip().Play(_clipData);
         }
 
         private void SpaceKeyDown()
         {
             _soundB ??= SoundManager.Instance.CreateSoundBuilder();
-            _soundB.WithRandomClip().Play(_clipData);
+            _soundB.WithCertainClip(2).Play(_clipData);
         }
     }
-
 }

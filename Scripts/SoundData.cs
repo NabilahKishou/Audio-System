@@ -41,5 +41,10 @@ namespace AudioSystem
             if (clips.Length <= 1) return clips[0];
             return isRandom ? clips[Random.Range(0, clips.Length - 1)] : clips[0];
         }
+
+        public AudioClip GetClip(int index)
+        {
+            return clips[index];
+        }
     }
 }

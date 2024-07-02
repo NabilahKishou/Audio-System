@@ -18,6 +18,10 @@ namespace AudioSystem
             this._volume = value;
         }
 
+        public bool IsMuted()
+        {
+            return _isMute;
+        }
         public float GetVolume()
         {
             return _isMute ? 0f : _volume;
