@@ -31,6 +31,14 @@ _soundB ??= SoundManager.Instance.CreateSoundBuilder();
 _soundB.WithRandomClip().Play(_clipData);
 ```
 
+## How-to-Install
+
+You can easily install this audio system by downloading the package library into your Unity project or you could install this by import it in Unity via the Unity Package Manager using this URL:
+
+```
+https://github.com/NabilahKishou/Audio-System.git
+```
+
 ## Thank-you Notes
 
 This audio system was all inspired from [Adam Mhyre's Video](https://youtu.be/BgpqoRFCNOs) and kindly visit his [Audio System Repo](https://github.com/adammyhre/Unity-Audio-Pooling).
