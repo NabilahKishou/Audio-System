@@ -1,0 +1,21 @@
+{
+  "name": "com.nabilahkishou.audiosystem",
+  "version": "1.0.0",
+  "displayName": "Audio System",
+  "description": "Audio system with object-pooling approach.",
+  "unity": "2020.1",
+  "dependencies": {
+    "com.nabilahkishou.objectpool" : "https://github.com/NabilahKishou/Object-Pooling.git"
+  },
+  "author": {
+    "name": "Septian Nabilah",
+    "url" : "https://github.com/NabilahKishou"
+  },
+  "samples" : [
+    {
+       "displayName": "Audio System Example",
+       "description": "Contains sample scene for running example on Audio System and Sound Volume Settings",
+       "path": "Samples~/Example"
+    }
+  ]
+}
