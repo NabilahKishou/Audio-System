@@ -9,17 +9,20 @@ variant SFX results.
 First thing first, you need to create a prefab with [SoundEmitter.cs]() as its component. 
 It will automatically add AudioSource component with it.
 
-![Sound Emitter Image]()
+![Sound Emitter Image](https://github.com/NabilahKishou/Audio-System/assets/33479013/a52a203b-da58-4f48-9d30-2d949fe760ac)
+
 
 Next step you create an object with [SoundManager.cs]() on it. 
 Insert the Sound Emitter prefab above to the Sound Emitter Prefab field on the SoundManager object via inspector.
 
-![Sound Manager Image]()
+![Sound Manager Image](https://github.com/NabilahKishou/Audio-System/assets/33479013/614f7044-6f0b-4bd2-bf9d-c7b0aa69a17b)
+
 
 Create your SoundData SO to store your clips. You could create it via Right Click > Create > Audio Settings > Sound Data.
 Don't forget to add the clips and setup the sound settings as your preference.
 
-![Sound Data Image]()
+![Sound Data Image](https://github.com/NabilahKishou/Audio-System/assets/33479013/9d1d8534-d92b-4e52-a8ca-ae0306432346)
+
 
 Last you just need to reference the SoundData SO and call it via [SoundBuilder.cs]() to play the audio.
 
