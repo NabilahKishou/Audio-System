@@ -1,0 +1,16 @@
+{
+    "name": "com.nabilahkishou.audiosystem",
+    "rootNamespace": "",
+    "references": [
+        "GUID:987142455b67bce45aa85794de1a17fb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
